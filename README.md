@@ -4,7 +4,7 @@ AI to play checkers
 CheckerBot is a checkers playing program. 
 
 MVP flow: Opponents move is typed into the terminal. CheckerBot processes the move and, using an AI strategy, prints out a move of its own.
-Moves represented as (starting square) (x for jump or - for move) (ending square) (K at end for promotion) e5-d4, e5xc3, e5xc3xe1K
+Moves represented as (starting square) (x for jump or nothing for move) (ending square) (K at end for promotion) e5d4, e5xc3, e5xc3xe1K
 
 
 Necessary steps (abstracted | specific)
