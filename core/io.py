@@ -18,7 +18,7 @@ RANK_MAP = {
     '7':6,
     '8':7
 }
-ALPHA_MAP = 'ABCDEFGH'
+ALPHA_MAP = 'hgfedcba'
 
 def from_square(square):
     file = FILE_MAP[square[0]]
@@ -27,7 +27,7 @@ def from_square(square):
 
 def to_square(rank,file):
     rank = rank + 1
-    return ALPHA_MAP[file+1] + str(rank)
+    return ALPHA_MAP[file] + str(rank)
 
 def square(square):
     return from_square(square)
