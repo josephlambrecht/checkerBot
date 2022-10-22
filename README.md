@@ -4,11 +4,13 @@ AI to play checkers
 CheckerBot is a checkers playing program. 
 
 MVP flow: Opponents move is typed into the terminal. CheckerBot processes the move and, using an AI strategy, prints out a move of its own.
+Moves represented as (starting square) (x for jump or - for move) (ending square) (K at end for promotion) e5-d4, e5xc3, e5xc3xe1K
+
 
 Necessary steps (abstracted | specific)
 - Creata object classes for pieces | pawn and king with properties: color
 - Store board state | 2d array with piece representation
-- Calculate possible moves
+- Calculate possible moves | three types- move, jump, double jump. check diagonals- if blocked check next, if open check jump. if jump check for more jumps.
 - choose a move (this is where the fun begins)
 - display the move and update board state
 
