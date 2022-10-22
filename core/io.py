@@ -31,3 +31,4 @@ def to_square(rank,file):
 
 def square(square):
     return from_square(square)
+
