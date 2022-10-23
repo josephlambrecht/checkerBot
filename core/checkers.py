@@ -1,11 +1,14 @@
 from core.io import to_square, from_square
+import numpy as np
 
-def evaluate_move(start_square,end_square):
-    return 1
+def evaluate_move(move):
+    if 'x' in move:
+        return len(move)
+    return 0
 
-def evaluate_moves(moves: dict):
-    for start_square, possible_moves in moves.items():
-        for end_square in possible_moves:
-            # end square is a list
-            if evaluate_move(start_square,end_square) == 1:
-                return start_square, end_square
+def evaluate_moves(moves):
+    ranking = np.zeros(len(moves))
+    for i in range(len(moves)):
+        ranking[i] = evaluate_move(moves[i])
+    move = moves[np.argmax(ranking)]
+    return move

@@ -26,7 +26,7 @@ def from_square(square):
     return rank,file
 
 def to_square(rank,file):
-    rank = rank + 1
+    rank = int(rank) + 1
     return ALPHA_MAP[file] + str(rank)
 
 def square(square):
